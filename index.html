@@ -56,12 +56,41 @@
 <body>
     <h1>🎮 OOP Platform Game</h1>
     <canvas id="gameCanvas"></canvas>
+    
     <div class="controls">
-        <button onclick="game.reset()">🔄 Reset</button>
-        <button onclick="game.stop()">⏸️ Pause</button>
-        <button onclick="game.start()">▶️ Start</button>
+        <button id="resetBtn">🔄 Reset</button>
+        <button id="pauseBtn">⏸️ Pause</button>
     </div>
     
     <script src="platformgame.js"></script>
+    <script>
+        // Wait for everything to load
+        window.addEventListener('load', function() {
+            const resetBtn = document.getElementById('resetBtn');
+            const pauseBtn = document.getElementById('pauseBtn');
+            
+            // Reset button
+            resetBtn.addEventListener('click', function() {
+                console.log('🔴 Reset button clicked');
+                if (game) {
+                    game.reset();
+                }
+            });
+
+            // Pause button
+            pauseBtn.addEventListener('click', function() {
+                console.log('🔴 Pause button clicked');
+                if (game) {
+                    if (game.isRunning) {
+                        game.stop();
+                        this.textContent = '▶️ Resume';
+                    } else {
+                        game.start();
+                        this.textContent = '⏸️ Pause';
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
