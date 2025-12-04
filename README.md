@@ -1,5 +1,9 @@
 ## OOP Platform Game
 
+### Live Demo
+
+Play the game in your browser here: [jumpquest.vercel.app](https://jumpquest.vercel.app/).
+
 Teach or explore the four pillars of object-oriented programming by playing (and tweaking) a side-scrolling platformer built with nothing more than HTML5 canvas and vanilla JavaScript. The project is intentionally self-contained so you can drop it into any workshop folder or open it directly in a browser.
 
 ### Features
